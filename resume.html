@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jivan Toshniwal - Software Engineer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI",
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+        color: #1a1a1a;
+        background: #ffffff;
+        padding: 0;
+        font-size: 10pt;
+      }
+
+      .container {
+        max-width: 210mm;
+        margin: 0 auto;
+        background: white;
+        padding: 15mm 18mm;
+      }
+
+      .header {
+        border-bottom: 2px solid #1a1a1a;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+      }
+
+      .header h1 {
+        font-size: 24pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 2px;
+        letter-spacing: -0.5px;
+      }
+
+      .header .title {
+        font-size: 10pt;
+        font-weight: 500;
+        color: #4a4a4a;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .contact-info-header {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 8pt;
+        color: #4a4a4a;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .contact-item a {
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .content-wrapper {
+        display: grid;
+        grid-template-columns: 165px 1fr;
+        gap: 22px;
+      }
+
+      .sidebar {
+        padding-right: 12px;
+      }
+
+      .main-content {
+      }
+
+      .section {
+        margin-bottom: 14px;
+      }
+
+      .section-title {
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 1.5px solid #1a1a1a;
+        padding-bottom: 2px;
+      }
+
+      .education-item {
+        margin-bottom: 8px;
+      }
+
+      .degree {
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 1px;
+        font-size: 8pt;
+        line-height: 1.3;
+      }
+
+      .institution {
+        font-size: 7.5pt;
+        color: #4a4a4a;
+        line-height: 1.3;
+      }
+
+      .skills-category {
+        margin-bottom: 9px;
+      }
+
+      .skills-category-title {
+        font-weight: 600;
+        font-size: 8pt;
+        color: #1a1a1a;
+        margin-bottom: 3px;
+      }
+
+      .skills-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .skills-list li {
+        padding-left: 10px;
+        position: relative;
+        font-size: 7.5pt;
+        color: #2a2a2a;
+        line-height: 1.3;
+        margin-bottom: 1px;
+      }
+
+      .skills-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #1a1a1a;
+        font-weight: 600;
+      }
+
+      .cert-item {
+        margin-bottom: 7px;
+      }
+
+      .cert-item .cert-name {
+        font-weight: 600;
+        color: #1a1a1a;
+        font-size: 8pt;
+        margin-bottom: 1px;
+        line-height: 1.3;
+      }
+
+      .cert-item .cert-details {
+        font-size: 7pt;
+        color: #4a4a4a;
+        line-height: 1.3;
+      }
+
+      .language-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .language-list li {
+        padding-left: 10px;
+        position: relative;
+        font-size: 7.5pt;
+        color: #2a2a2a;
+        line-height: 1.3;
+        margin-bottom: 1px;
+      }
+
+      .language-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #1a1a1a;
+        font-weight: 600;
+      }
+
+      .job {
+        margin-bottom: 12px;
+      }
+
+      .job-header {
+        margin-bottom: 3px;
+      }
+
+      .job-title {
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 2px;
+      }
+
+      .company {
+        color: #2a2a2a;
+        font-size: 9pt;
+        font-weight: 600;
+        margin-bottom: 1px;
+      }
+
+      .job-date {
+        color: #4a4a4a;
+        font-size: 8pt;
+        margin-bottom: 6px;
+      }
+
+      .achievements {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .achievements li {
+        padding-left: 12px;
+        margin-bottom: 4px;
+        position: relative;
+        font-size: 8pt;
+        line-height: 1.35;
+        color: #2a2a2a;
+      }
+
+      .achievements li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #1a1a1a;
+        font-weight: 600;
+        font-size: 8.5pt;
+      }
+
+      .highlight {
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .print-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #1a1a1a;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 11pt;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        font-family: inherit;
+      }
+
+      .print-button:hover {
+        background: #2a2a2a;
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 8mm 10mm;
+        }
+
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          background: white;
+        }
+
+        .container {
+          max-width: 100%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+
+        .print-button {
+          display: none !important;
+        }
+
+        .header {
+          padding-bottom: 6px;
+          margin-bottom: 10px;
+          page-break-after: avoid;
+        }
+
+        .header h1 {
+          font-size: 22pt;
+          margin-bottom: 2px;
+          line-height: 1.1;
+        }
+
+        .header .title {
+          font-size: 10pt;
+          margin-bottom: 6px;
+        }
+
+        .contact-info-header {
+          font-size: 8pt;
+          gap: 14px;
+        }
+
+        .content-wrapper {
+          display: grid !important;
+          gap: 22px;
+          grid-template-columns: 165px 1fr !important;
+        }
+
+        .sidebar {
+          padding-right: 12px;
+        }
+
+        .section {
+          margin-bottom: 13px;
+          page-break-inside: avoid;
+        }
+
+        .section-title {
+          font-size: 9pt;
+          margin-bottom: 6px;
+          padding-bottom: 3px;
+          line-height: 1.25;
+          letter-spacing: 0.02em;
+        }
+
+        .job {
+          margin-bottom: 11px;
+          page-break-inside: avoid;
+        }
+
+        .job-header {
+          margin-bottom: 4px;
+        }
+
+        .job-title {
+          font-size: 9.5pt;
+          line-height: 1.25;
+          margin-bottom: 3px;
+          letter-spacing: 0.01em;
+        }
+
+        .company {
+          font-size: 9pt;
+          line-height: 1.25;
+          margin-bottom: 2px;
+          letter-spacing: 0.01em;
+        }
+
+        .job-date {
+          font-size: 8pt;
+          margin-bottom: 6px;
+        }
+
+        .achievements {
+          margin-top: 0;
+        }
+
+        .achievements li {
+          margin-bottom: 4px;
+          font-size: 8pt;
+          line-height: 1.4;
+          padding-left: 11px;
+          letter-spacing: 0.01em;
+        }
+
+        .achievements li:before {
+          font-size: 8pt;
+        }
+
+        .skills-list li,
+        .language-list li {
+          font-size: 7.5pt;
+          margin-bottom: 2px;
+          padding-left: 9px;
+          line-height: 1.35;
+          letter-spacing: 0.01em;
+        }
+
+        .skills-list li:before,
+        .language-list li:before {
+          font-size: 7.5pt;
+        }
+
+        .degree {
+          font-size: 8pt;
+          line-height: 1.35;
+          margin-bottom: 2px;
+          letter-spacing: 0.01em;
+        }
+
+        .institution {
+          font-size: 7.5pt;
+          line-height: 1.35;
+          letter-spacing: 0.01em;
+        }
+
+        .cert-item {
+          margin-bottom: 6px;
+        }
+
+        .cert-item .cert-name {
+          font-size: 8pt;
+          line-height: 1.35;
+          margin-bottom: 2px;
+          letter-spacing: 0.01em;
+        }
+
+        .cert-item .cert-details {
+          font-size: 7pt;
+          line-height: 1.35;
+          letter-spacing: 0.01em;
+        }
+
+        .skills-category {
+          margin-bottom: 7px;
+        }
+
+        .skills-category-title {
+          font-size: 8pt;
+          margin-bottom: 3px;
+          line-height: 1.3;
+          letter-spacing: 0.01em;
+        }
+
+        .education-item {
+          margin-bottom: 6px;
+        }
+
+        .sidebar .section:last-child {
+          margin-bottom: 0;
+        }
+
+        .main-content .section:last-child {
+          margin-bottom: 0;
+        }
+
+        .highlight {
+          font-weight: 600;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .content-wrapper {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .sidebar {
+          padding-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-button" onclick="window.print()">
+      Print / Save PDF
+    </button>
+
+    <div class="container">
+      <div class="header">
+        <h1>JIVAN TOSHNIWAL</h1>
+        <div class="title">
+          Senior Software Engineer - AI Platform Engineering & Cloud
+          Infrastructure
+        </div>
+        <div class="contact-info-header">
+          <div class="contact-item">
+            <span>📧</span>
+            <a href="mailto:toshniwal.j@gmail.com">toshniwal.j@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>📞</span>
+            <span>+91 9822442282</span>
+          </div>
+          <div class="contact-item">
+            <span>📍</span>
+            <span>Mumbai, India</span>
+          </div>
+          <div class="contact-item">
+            <span>🌐</span>
+            <a href="https://linkedin.com/in/jivantoshniwal" target="_blank"
+              >linkedin.com/in/jivantoshniwal</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="sidebar">
+          <div class="section">
+            <h3 class="section-title">Technical Skills</h3>
+
+            <div class="skills-category">
+              <div class="skills-category-title">Cloud & Infrastructure</div>
+              <ul class="skills-list">
+                <li>Microsoft Azure</li>
+                <li>Infrastructure as Code (IaC)</li>
+                <li>Terraform, Terragrunt</li>
+                <li>Docker, Kubernetes, Helm</li>
+                <li>Azure DevOps, Azure Monitor</li>
+              </ul>
+            </div>
+
+            <div class="skills-category">
+              <div class="skills-category-title">DevOps & SRE</div>
+              <ul class="skills-list">
+                <li>CI/CD: Jenkins, ArgoCD, GitOps</li>
+                <li>Grafana, Prometheus, New Relic</li>
+                <li>Splunk, Azure Log Analytics</li>
+                <li>Site Reliability Engineering</li>
+                <li>Incident Response & On-Call</li>
+              </ul>
+            </div>
+
+            <div class="skills-category">
+              <div class="skills-category-title">Development & AI</div>
+              <ul class="skills-list">
+                <li>Python 3.x, FastAPI, Asyncio</li>
+                <li>LangChain Agents, Agentic AI</li>
+                <li>LangSmith, Weave, MLflow</li>
+                <li>LLM-as-Judge, OpenAI API</li>
+                <li>PostgreSQL, Redis, SQLAlchemy</li>
+                <li>RESTful APIs, Microservices</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Education</h3>
+            <div class="education-item">
+              <div class="degree">Diploma in Pharmacy</div>
+              <div class="institution">
+                Channa Bashweshwar Pharmacy College, Latur
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="degree">Technical Training</div>
+              <div class="institution">
+                Data Structures, Algorithms, System Design, Cloud Architecture
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Languages</h3>
+            <ul class="language-list">
+              <li>English (Fluent)</li>
+              <li>Hindi (Native)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-content">
+          <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">
+                  Software Engineer - Cloud Infrastructure & DevOps
+                </div>
+              </div>
+              <div class="company">Adobe Systems India Pvt. Ltd.</div>
+              <div class="job-date">
+                March 2024 - Present | DevOps • SRE • Platform Engineering • IaC
+              </div>
+
+              <ul class="achievements">
+                <li>
+                  Architected enterprise-grade
+                  <span class="highlight">observability infrastructure</span>
+                  using Terraform, Grafana, Prometheus, deploying 24+ production
+                  alerts across PostgreSQL, Redis, Azure API Management, and AI
+                  Foundry in 3 regions (US, EU, APAC), reducing incident
+                  detection by 60%
+                </li>
+
+                <li>
+                  Built comprehensive
+                  <span class="highlight">SRE monitoring solutions</span> using
+                  New Relic, Grafana, Splunk, Azure Monitor for distributed
+                  microservices, enabling proactive alerting and zero-downtime
+                  migrations for Kubernetes infrastructure serving 1M+ requests
+                  daily
+                </li>
+
+                <li>
+                  Designed
+                  <span class="highlight">chat completions API</span> with
+                  parallel async governance pipeline for input/output content
+                  evaluation using asyncio, reducing latency by 40% through
+                  concurrent LLM inference and safety checks for agentic AI
+                  workflows
+                </li>
+
+                <li>
+                  Built
+                  <span class="highlight"
+                    >AI safety & evaluation infrastructure</span
+                  >
+                  implementing HarmAndBiasTool, guardrails v2, LLM-as-judge
+                  evaluators (persona adherence, brand validation, diversity),
+                  and LangSmith/Weave/MLflow observability for Gen AI content
+                  generation across 15+ enterprise clients
+                </li>
+
+                <li>
+                  Led
+                  <span class="highlight">Gen AI platform engineering</span> for
+                  15+ clients, implementing Azure API Management policies,
+                  GPT-4o/o3 provisioning, OAuth, and RESTful API integrations
+                  for Adobe Experience Intelligence
+                </li>
+
+                <li>
+                  Designed
+                  <span class="highlight"
+                    >multi-region cloud infrastructure</span
+                  >
+                  using IaC (Terraform/Terragrunt) across VA7, NLD2, AUS5 with
+                  Azure MCT peering, private endpoints, service mesh, completing
+                  100+ production deployments via GitOps workflows
+                </li>
+
+                <li>
+                  Developed
+                  <span class="highlight">CI/CD automation framework</span>
+                  using Python Behave (BDD), pytest, Jenkins for Customer AI and
+                  Firefall APIs, implementing 100+ integration tests, reducing
+                  production incidents by 35%
+                </li>
+
+                <li>
+                  Led
+                  <span class="highlight">PostgreSQL infrastructure</span>
+                  upgrades (v16→v17) and performance monitoring for Brand
+                  Service microservices, implementing high availability and
+                  KQL-based alerts using Azure Log Analytics
+                </li>
+
+                <li>
+                  Created 4 reusable
+                  <span class="highlight">Terraform IaC modules</span> for
+                  infrastructure monitoring, enabling platform teams to deploy
+                  observability to new services in minutes while maintaining
+                  100% configuration consistency
+                </li>
+
+                <li>
+                  Built secure
+                  <span class="highlight">CI/CD pipelines</span> integrating
+                  HashiCorp Vault, PagerDuty, Azure DevOps, architecting 15+
+                  Jenkins pipelines with blue-green deployments and automated
+                  rollback
+                </li>
+
+                <li>
+                  Implemented
+                  <span class="highlight">Azure APIM monitoring</span> with 11
+                  alert types covering 5xx errors, capacity (>85%), latency
+                  (>10s), CPU/memory (>85%/90%), ensuring 99.9% uptime SLA
+                </li>
+
+                <li>
+                  Conducted <span class="highlight">load testing</span> (500+
+                  RPS) using Locust and JMeter, created operational runbooks for
+                  incident response, maintained 24/7 reliability through on-call
+                  rotation with distributed tracing
+                </li>
+
+                <li>
+                  Enforced
+                  <span class="highlight">security and IAM</span> standards
+                  including Azure RBAC, secret management with Vault, and
+                  quarterly audits for multi-tenant SaaS infrastructure
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Key Impact</h2>
+            <ul class="achievements">
+              <li>
+                <strong>100+ deployments</strong> across multi-region Azure
+                (VA7, NLD2, AUS5) • <strong>15+ clients</strong> onboarded to
+                Gen AI platform
+              </li>
+              <li>
+                <strong>60% faster</strong> incident detection (MTTD) •
+                <strong>35% fewer</strong> production incidents •
+                <strong>40% faster</strong> deployments
+              </li>
+              <li>
+                <strong>99.9% uptime SLA</strong> •
+                <strong>24+ alert types</strong> across 3 continents •
+                <strong>Zero-downtime</strong> migrations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
